@@ -1,7 +1,7 @@
 - name: Add_new_osts_in_Zabbix
   hosts: localhost
   vars_files:
-  - [path_to_your_files]]
+  - [path_to_your_files]
 
 
   tasks:
