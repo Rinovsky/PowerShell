@@ -1,0 +1,37 @@
+- name: Add_new_host_in_Zabbix
+  hosts: localhost
+  tasks:
+  #- name: Set credentials to access Zabbix Server API1
+  #  ansible.builtin.set_fact:
+  #   ansible_user: 
+  #   ansible_httpapi_pass: 
+  - name: Set API token
+    set_fact:
+      ansible_zabbix_auth_key: 
+  - name: Create a new host or rewrite an existing host's info
+    vars:
+      ansible_network_os: community.zabbix.zabbix
+      ansible_connection: httpapi
+      ansible_httpapi_port: 80
+      ansible_httpapi_use_ssl: false
+      ansible_httpapi_validate_certs: false
+      ansible_host: zabbix_host(zabbix.localhost)
+    community.zabbix.zabbix_host:
+      host_name: 
+      visible_name: 
+      description: 
+      host_groups:
+      - group1
+      - group2
+      - group3
+      link_templates:
+      - Template_name
+      status: enabled
+      state: present
+      interfaces:
+      - type: 1
+        main: 1
+        useip: 1
+        ip: ip_adress
+        dns: ""
+        port: "10050"

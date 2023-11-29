@@ -1,0 +1,41 @@
+- name: Add_new_osts_in_Zabbix
+  hosts: localhost
+  vars_files:
+  - [path_to_your_files]
+
+
+  tasks:
+  #- name: Set credentials to access Zabbix Server API1
+  #  ansible.builtin.set_fact:
+  #   ansible_user: 
+  #   ansible_httpapi_pass: 
+  - name: Set API token
+    set_fact:
+      ansible_zabbix_auth_key: ssh_key
+
+  - name: Create a new host or rewrite an existing host's info
+    vars:
+      ansible_network_os: community.zabbix.zabbix
+      ansible_connection: httpapi
+      ansible_httpapi_port: 80
+      ansible_httpapi_use_ssl: false
+      ansible_httpapi_validate_certs: false
+      ansible_host: zabix_host
+    community.zabbix.zabbix_host:
+      host_name: "{{ item.name }}"
+      visible_name: "{{ item.name }}"
+      description: "{{ item.name }}"
+      host_groups:
+      - "{{ item.group }}"
+      link_templates:
+      - Linux by Zabbix agent
+      status: enabled
+      state: present
+      interfaces:
+      - type: 1
+        main: 1
+        useip: 1
+        ip: "{{ item.ip }}"
+        dns: ""
+        port: "10050"
+    with_items: "{{ hosts_details }}"
