@@ -1,0 +1,3 @@
+Here we have 2 scripts for collect info from perfmon.exe
+First script is shedulling, running & export collected data in csv
+Second script is analyzing & export in xlsx file for detailed view
