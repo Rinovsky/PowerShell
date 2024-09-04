@@ -1,0 +1,16 @@
+This script helps to you collect data from perfmon.exe, system registry & logs.
+Registry-part to export:
+"HKLM\SOFTWARE\Microsoft\Azure\StorageSync"
+Logs to export:
+"Microsoft-FileSync-Agent/Diagnostic"  
+"Microsoft-FileSync-Agent/ItemResults" 
+"Microsoft-FileSync-Agent/Operational" 
+"Microsoft-FileSync-Agent/RecallResults" 
+"Microsoft-FileSync-Agent/Scrubbing" 
+"Microsoft-FileSync-Agent/Telemetry" 
+"Microsoft-FileSync-Agent/TieringResults"
+"Application"
+"System"
+"Microsoft-FileSync-Management/Diagnostic"
+"Microsoft-FileSync-Management/Operational"
+Before you'll run the script, you must create your own template in perfmon.exe & save it as file.
