@@ -1,0 +1,1 @@
+Get-ADGroupMember -Identity ’Group_name’ -recursive| foreach { Get-ADUser $_ -properties UserPrincipalName, title, PasswordLastSet, AccountExpirationDate} | Out-File c:\TEMP\accounts.csv
