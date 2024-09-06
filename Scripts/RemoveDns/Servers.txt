@@ -1,1 +1,1 @@
-.txt
+#List of servers
