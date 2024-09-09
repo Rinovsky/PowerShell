@@ -1,1 +1,7 @@
 This script allows to you check properties of all disks(Non OS, logical) on host
+Properties like:
+Type of FileSystem
+Capacity
+Model
+Path
+LogicalSectorSize
