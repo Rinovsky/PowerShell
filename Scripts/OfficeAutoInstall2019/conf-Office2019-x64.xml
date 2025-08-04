@@ -1,0 +1,17 @@
+<Configuration>
+<Add OfficeClientEdition="64" Channel="PerpetualVL2019">
+    <Product ID="Proplus2019Volume" PIDKEY="XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99">
+      <Language ID="ru-RU" />
+      <ExcludeApp ID="Access" />
+      <ExcludeApp ID="Publisher" />
+      <ExcludeApp ID="Groove" />
+      <ExcludeApp ID="Lync" />
+      <ExcludeApp ID="OneNote" />
+      <ExcludeApp ID="OneDrive" />
+    </Product>
+</Add>
+<RemoveMSI All="True" /> 
+<Property Name="AUTOACTIVATE" Value="1" />
+<Display Level="Full" AcceptEULA="TRUE" />
+<Updates Enabled="TRUE" Channel="PerpetualVL2019" />
+</Configuration>
