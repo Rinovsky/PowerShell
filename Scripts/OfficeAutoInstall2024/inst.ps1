@@ -1,5 +1,5 @@
 # PowerShell-скрипт для установки Microsoft Office 2024 LTSC
-$odtPath = "C:\ODT"
+$odtPath = "C:\ODT" # Директория, где должны лежать установочные файлы
 $setupExe = Join-Path $odtPath "setup.exe"
 $configXml = Join-Path $odtPath "conf.xml"
 
