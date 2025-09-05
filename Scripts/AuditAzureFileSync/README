@@ -13,4 +13,4 @@ Logs to export:
 "System"
 "Microsoft-FileSync-Management/Diagnostic"
 "Microsoft-FileSync-Management/Operational"
-Before you'll run the script, you must create your own template in perfmon.exe & save it as file.
+#Before you'll run the script, you must create your own template in perfmon.exe & save it as file.
