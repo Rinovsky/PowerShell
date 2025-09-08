@@ -1,2 +1,2 @@
 This script allows to you check free ports or not on remote hosts
-You may write your own ports to check them
+You may write your own ports to check them in file "list_servers"
