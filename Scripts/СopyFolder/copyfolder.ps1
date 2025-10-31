@@ -4,6 +4,11 @@ $source = "C:\Git\Obsidian"
 # Путь к целевой папке
 $destination = "C:\Users\Rinov\iCloudDrive\Obsidian"
 
+# Удаляем целевую папку целиком, если она существует
+if (Test-Path -Path $destination) {
+    Remove-Item -Path $destination -Recurse -Force
+}
+
 # Создаём целевую папку, если её нет
 if (-not (Test-Path -Path $destination)) {
     New-Item -ItemType Directory -Path $destination
