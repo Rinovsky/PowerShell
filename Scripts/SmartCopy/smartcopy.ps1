@@ -1,6 +1,6 @@
 # === Настройки ===
 $source = "C:\Git\Obsidian"       # Исходная папка
-$destination = "C:\Users\Rinov\iCloudDrive\Obsidian"  # Целевая папка
+$destination = "C:\Users\Rinov\iCloudDrive\iCloud~md~obsidian"  # Целевая папка
 $logFile = "C:\tmp\backup_log.txt"  # Лог-файл
 
 # === Проверки ===
