@@ -3,3 +3,5 @@ This script installs Microsoft Office 2024 (LTSC) with components:
 2. Microsoft Excel
 3. Microsoft Outlook
 4. Microsoft PowerPoint
+
+Before execute script, you'll need to "Set-ExecutionPolicy bypass"
